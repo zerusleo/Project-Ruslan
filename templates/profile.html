@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветствие</title>
+    <style>
+        body {
+            background-image: url('https://1prof.by/wp-content/uploads/2020/06/hacker-4031973_1920.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: khaki;
+        }
+        .d1 {
+            position: absolute;
+            top: 20vh;
+            left: 60vw;
+            height: 5vh;
+            width: 30vw;
+            font-size: 25px;
+            background: lightblue;
+            border-radius: 15px;
+            padding: 1rem;
+        }
+        img {
+            position: absolute;
+            left: 10vw;
+            top: 20vh;
+            height: 30vh;
+            width: 20vw;
+            border-radius: 50vw;
+        }
+        button {
+            position: absolute;
+            left: 60vw;
+            top: 30vh;
+            height: 8vh;
+            width: 15vw;
+            font-size: 25px;
+            background: darkcyan;
+            border-radius: 30vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">Здравствуйте, {{ user }}!</div>
+    <a href="/avatar/"><input type="button" value="Выберите аватарку"></a>
+    <form action="" method="post"><button>Выйти</button></form>
+</body>
+</html>

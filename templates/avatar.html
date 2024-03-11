@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2 style="color: green">ВЫБЕРИТЕ ИЗОБРАЖЕНИЕ ДЛЯ ПЕРСОНАЛЬНОЙ АВАТАРКИ</h2>
+ <h3 style="color: green">ДАЙТЕ ЕМУ НАЗВАНИЕ И ОТКРОЙТЕ</h3>   
+<body class="d-flex justify-content-center align-items-center flex-column" style="background-color: yellow; height: 90vh">
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+   {{ form.as_p }}
+  <button type="submit">open</button>
+</form>
+
+{% if img_obj %}
+    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+    <img id='sos' src="{{ img_obj.Image.url}}" alt="аватарка пользователя">
+{% endif %}
+
+<style>
+    
+    .d1 {
+        position: absolute;
+        top: 20vh;
+        left: 60vw;
+        height: 5vh;
+        width: 30vw;
+        font-size: 25px;
+        background: lightblue;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+    
+    img {
+        display: block;
+        max-width:300px;
+        max-height:120px;
+        width: auto;
+        height: auto;
+}
+
+    button {
+        position: absolute;
+        left: 14vw;
+        top: 35vh;
+        height: 4vh;
+        width: 8vw;
+        font-size: 25px;
+        background: darkcyan;
+        border-radius: 30vw;
+    }
+</style>
+
+
+</body>
+</html>
